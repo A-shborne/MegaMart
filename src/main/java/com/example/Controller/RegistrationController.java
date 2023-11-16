@@ -17,13 +17,13 @@ import com.example.Utility.Response;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/register")
+@RequestMapping("/registration")
 public class RegistrationController {
 	
 	@Autowired
 	private RegistrationService registrationService;
 	
-	@PostMapping
+	@PostMapping("/register")
 	public ResponseEntity<Response> registerUser(@RequestBody @Valid AccountDTO accountDTO){
 		Response response= new Response();
 		if(registrationService.doEmailexsist(accountDTO.getEmail())) {
