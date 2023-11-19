@@ -18,7 +18,7 @@ public class Product {
 	private String description;
 	@Column(name = "price")
 	private double price;
-	@Column(name = "doscount")
+	@Column(name = "discount")
 	private double discount;
 	@Column(name = "delivery_charges")
 	private double deliveryCharges;
